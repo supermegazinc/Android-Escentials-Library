@@ -61,7 +61,7 @@ publishing {
     repositories {
         maven {
             name = "GitHubPackages"
-            url = uri("https://maven.pkg.github.com/supermegazinc/Android-Escentials-Library")
+            url = uri("https://maven.pkg.github.com/supermegazinc/Android-Libraries")
             credentials {
                 username = githubProperties["gpr.usr"] as String?
                 password = githubProperties["gpr.key"] as String?
