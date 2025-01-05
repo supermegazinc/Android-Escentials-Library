@@ -23,14 +23,10 @@
               val githubProperties = Properties()
               githubProperties.load(FileInputStream("./github.properties"))
 
-              val githubPackages = listOf(
-                  "https://maven.pkg.github.com/supermegazinc/Android-Escentials-Library"
-              )
-
               githubPackages.forEach { packageUrl ->
                   maven {
                       name = "GitHubPackages"
-                      url = uri(packageUrl)
+                      url = uri("https://maven.pkg.github.com/supermegazinc/Android-Libraries")
                       credentials {
                           username = githubProperties["gpr.usr"] as String?
                           password = githubProperties["gpr.key"] as String?
