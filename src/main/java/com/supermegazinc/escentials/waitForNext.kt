@@ -41,3 +41,9 @@ suspend inline fun <reified D> SharedFlow<*>.waitForNextInstanceWithTimeout(time
             .first()
     }
 }
+
+suspend fun <T> Flow<T>.firstWithTimeout(timeoutMillis: Long): T {
+    return withTimeout(timeoutMillis) {
+        first()
+    }
+}

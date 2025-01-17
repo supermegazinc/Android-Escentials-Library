@@ -33,7 +33,7 @@ publishing {
 
             groupId = "com.supermegazinc.libraries"
             artifactId = artifactId
-            version = "2.1"
+            version = "2.2"
             artifact("${layout.buildDirectory.get().asFile}/outputs/aar/$artifactId-release.aar")
 
             pom {
@@ -67,6 +67,10 @@ publishing {
                 password = githubProperties["gpr.key"] as String?
             }
         }
+        //maven {
+        //    name = "LocalRepository"
+        //    url = uri("${layout.projectDirectory.asFile}/Repository")
+        //}
     }
 }
 
